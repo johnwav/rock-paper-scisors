@@ -1,0 +1,35 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&family=Open+Sans:wght@600;800&family=Poppins:ital,wght@0,700;1,400;1,800&display=swap");
+
+:root {
+  /*Colors */
+
+  /* Primary */
+
+  --scissors-gradient: hsl(39, 89%, 49%) to hsl(40, 84%, 53%);
+  --paper-gradient: hsl(230, 89%, 62%) to hsl(230, 89%, 65%);
+  --rock-gradient: hsl(349, 71%, 52%) to hsl(349, 70%, 56%);
+  --lizard-gradient: hsl(261, 73%, 60%) to hsl(261, 72%, 63%);
+  --cyan: hsl(189, 59%, 53%) to hsl(189, 58%, 57%);
+
+  /* Neutral */
+
+  --DarkText: hsl(229, 25%, 31%);
+  --ScoreText: hsl(229, 64%, 46%);
+  --HeaderOutline: hsl(217, 16%, 45%);
+
+  /* Background */
+  --RadialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+
+  /* Fonts */
+
+  font-family: "Barlow Semi Condensed", sans-serif;
+
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
