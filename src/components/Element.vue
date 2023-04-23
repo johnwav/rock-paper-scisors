@@ -1,13 +1,19 @@
 <script setup>
-import { reactive , ref} from "vue"
-const {ElementImage, type} = defineProps(['ElementImage', 'type'])
+import { reactive, ref, watch } from "vue"
+const { ElementImage, type, size } = defineProps(['ElementImage', 'type', 'size'])
 
 const styleObject = reactive({})
 
 
+
+if (size === 'large') {
+    styleObject.scale = 1.3
+}
+
 if (type === 'paper') {
     styleObject.backgroundColor = 'blue'
     styleObject.boxShadow = '0px 10px rgb(59, 17, 17)'
+
 }
 
 if (type === 'rock') {
@@ -19,17 +25,18 @@ if (type === 'rock') {
 if (type === 'sci') {
     styleObject.backgroundColor = 'yellow'
     styleObject.boxShadow = '0px 10px rgb(59, 17, 17)'
-
 }
 
-
+watch(type, (newValue) => {
+    type.value = newValue.value
+})
 
 
 </script>
 
 <template>
-    <div class="element" :style="styleObject">
-        <div class="wrapper" >
+    <div class="element" :style="styleObject" @click="$emit('played', type)">
+        <div class="wrapper">
             <img :src="ElementImage" alt="">
         </div>
     </div>
@@ -43,6 +50,7 @@ if (type === 'sci') {
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 
 .wrapper {

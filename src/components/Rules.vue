@@ -22,5 +22,6 @@
   right: 28px;
   font-size: 15px;
   letter-spacing: 2px;
+  cursor: pointer;
 }
 </style>
