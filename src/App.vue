@@ -5,7 +5,7 @@ import Rules from "./components/Rules.vue"
 import Control from "./components/Element.vue"
 import RulesBackdrop from "./components/RulesBackdrop.vue"
 
-const rulesOpen = ref(false)
+const rulesOpen = ref(true)
 const step = ref(1)
 const UserSelect = ref('')
 const CPUSelect = ref('')
